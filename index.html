@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>DEV.SUITE</h2>
+        </div>
+
+        <p class="menu-title">ADMIN</p>
+
+        <ul class="menu">
+
+            <li class="active">
+                <a href="#">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-users"></i>
+                    Users
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-user-lock"></i>
+                    Roles & Permissions
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-wallet"></i>
+                    Billing
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Audit Logs
+                </a>
+            </li>
+
+        </ul>
+
+        <p class="menu-title">FILTERS</p>
+
+        <ul class="menu">
+
+            <li><a href="#">All Members</a></li>
+
+            <li><a href="#">Active</a></li>
+
+            <li><a href="#">Invited</a></li>
+
+            <li><a href="#">Suspended</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main">
+
+        <!-- Navbar -->
+
+        <div class="navbar">
+
+            <h2>User Management</h2>
+
+            <button class="invite-btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Invite User
+            </button>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="cards">
+
+            <div class="card">
+                <span>Total Users</span>
+                <h2>142</h2>
+                <p>Registered users</p>
+            </div>
+
+            <div class="card">
+                <span>Active</span>
+                <h2>128</h2>
+                <p>Currently Active</p>
+            </div>
+
+            <div class="card">
+                <span>New</span>
+                <h2>16</h2>
+                <p>This Month</p>
+            </div>
+
+            <div class="card">
+                <span>Admins</span>
+                <h2>6</h2>
+                <p>Administrator Accounts</p>
+            </div>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="toolbar">
+
+            <input
+                type="text"
+                placeholder="Search by name or email">
+
+            <select>
+
+                <option>All Roles</option>
+
+                <option>Admin</option>
+
+                <option>Editor</option>
+
+                <option>Viewer</option>
+
+            </select>
+
+            <select>
+
+                <option>All Status</option>
+
+                <option>Active</option>
+
+                <option>Invited</option>
+
+                <option>Suspended</option>
+
+            </select>
+
+        </div>
+
+        <!-- Table -->
+
+        <div class="table-box">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>User ID</th>
+
+                        <th>Role</th>
+
+                        <th>Status</th>
+
+                        <th>Joined</th>
+
+                        <th>Last Active</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Ananya Rao</td>
+                        <td>USR-001</td>
+                        <td><span class="role admin">Admin</span></td>
+                        <td><span class="status active">Active</span></td>
+                        <td>12 Feb 2024</td>
+                        <td>2 hrs ago</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Vikram Kulkarni</td>
+                        <td>USR-014</td>
+                        <td><span class="role editor">Editor</span></td>
+                        <td><span class="status active">Active</span></td>
+                        <td>03 Apr 2024</td>
+                        <td>5 hrs ago</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Priya Sharma</td>
+                        <td>USR-022</td>
+                        <td><span class="role viewer">Viewer</span></td>
+                        <td><span class="status active">Active</span></td>
+                        <td>19 May 2024</td>
+                        <td>Yesterday</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Marcus Jenkins</td>
+                        <td>USR-035</td>
+                        <td><span class="role editor">Editor</span></td>
+                        <td><span class="status invited">Invited</span></td>
+                        <td>01 Jun 2024</td>
+                        <td>Never</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Sneha Patel</td>
+                        <td>USR-041</td>
+                        <td><span class="role viewer">Viewer</span></td>
+                        <td><span class="status suspended">Suspended</span></td>
+                        <td>18 Jan 2024</td>
+                        <td>1 week ago</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Rahul Verma</td>
+                        <td>USR-052</td>
+                        <td><span class="role admin">Admin</span></td>
+                        <td><span class="status active">Active</span></td>
+                        <td>10 Mar 2024</td>
+                        <td>Today</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Kavya Reddy</td>
+                        <td>USR-063</td>
+                        <td><span class="role editor">Editor</span></td>
+                        <td><span class="status active">Active</span></td>
+                        <td>25 Feb 2024</td>
+                        <td>3 days ago</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Arjun Nair</td>
+                        <td>USR-074</td>
+                        <td><span class="role viewer">Viewer</span></td>
+                        <td><span class="status invited">Invited</span></td>
+                        <td>08 Jul 2024</td>
+                        <td>Never</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Neha Gupta</td>
+                        <td>USR-081</td>
+                        <td><span class="role editor">Editor</span></td>
+                        <td><span class="status active">Active</span></td>
+                        <td>22 Apr 2024</td>
+                        <td>4 hrs ago</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Rohit Singh</td>
+                        <td>USR-090</td>
+                        <td><span class="role viewer">Viewer</span></td>
+                        <td><span class="status suspended">Suspended</span></td>
+                        <td>11 Jan 2024</td>
+                        <td>2 weeks ago</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Aisha Khan</td>
+                        <td>USR-097</td>
+                        <td><span class="role admin">Admin</span></td>
+                        <td><span class="status active">Active</span></td>
+                        <td>05 May 2024</td>
+                        <td>1 hour ago</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Daniel Thomas</td>
+                        <td>USR-108</td>
+                        <td><span class="role editor">Editor</span></td>
+                        <td><span class="status active">Active</span></td>
+                        <td>17 Jun 2024</td>
+                        <td>Yesterday</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Meera Iyer</td>
+                        <td>USR-115</td>
+                        <td><span class="role viewer">Viewer</span></td>
+                        <td><span class="status invited">Invited</span></td>
+                        <td>29 Jun 2024</td>
+                        <td>Never</td>
+                        <td>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="pagination">
+
+            <button>Previous</button>
+
+            <button class="active">1</button>
+
+            <button>2</button>
+
+            <button>3</button>
+
+            <button>Next</button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
